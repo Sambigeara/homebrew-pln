@@ -5,40 +5,44 @@
 class Pln < Formula
   desc "Mesh network daemon"
   homepage ""
-  version "0.1.0-alpha.20"
+  version "0.1.0-alpha.21"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Sambigeara/pollen/releases/download/v0.1.0-alpha.20/pln_0.1.0-alpha.20_darwin_amd64.tar.gz"
-      sha256 "edbd22cb5839d67394a5caf64db4d0d6880374f23f36378d36ca491919ccd4a1"
+      url "https://github.com/Sambigeara/pollen/releases/download/v0.1.0-alpha.21/pln_0.1.0-alpha.21_darwin_amd64.tar.gz"
+      sha256 "bb6aba8bd1067551ac17a309fae50e6ea418c9cf53ac9be23788f621cf9915dd"
 
       define_method(:install) do
         bin.install "pln"
+        (etc/"newsyslog.d").install "pln.newsyslog.conf"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Sambigeara/pollen/releases/download/v0.1.0-alpha.20/pln_0.1.0-alpha.20_darwin_arm64.tar.gz"
-      sha256 "a6b101183bb221ea15fb0e7dc101cf3219f99f672cbc635ad01ae9d84af6650c"
+      url "https://github.com/Sambigeara/pollen/releases/download/v0.1.0-alpha.21/pln_0.1.0-alpha.21_darwin_arm64.tar.gz"
+      sha256 "0ebe85f9dead129b482a5ff7a14a44944277eea49816a002c71bfea1667d6b79"
 
       define_method(:install) do
         bin.install "pln"
+        (etc/"newsyslog.d").install "pln.newsyslog.conf"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Sambigeara/pollen/releases/download/v0.1.0-alpha.20/pln_0.1.0-alpha.20_linux_amd64.tar.gz"
-      sha256 "45a76fc0a5332308ebd370109c42d6f1d73bec63e6bc45fa3cd3830b6a18722a"
+      url "https://github.com/Sambigeara/pollen/releases/download/v0.1.0-alpha.21/pln_0.1.0-alpha.21_linux_amd64.tar.gz"
+      sha256 "93bf9e3dde395509c9659a9a0249a5a3e6929c93c7f8f60dfc6f5028d466b503"
       define_method(:install) do
         bin.install "pln"
+        (etc/"newsyslog.d").install "pln.newsyslog.conf"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Sambigeara/pollen/releases/download/v0.1.0-alpha.20/pln_0.1.0-alpha.20_linux_arm64.tar.gz"
-      sha256 "799c63c2e031cc6aa66192230b5a2e79ede16a1045ea9d2e7aa2378bdd1c1c96"
+      url "https://github.com/Sambigeara/pollen/releases/download/v0.1.0-alpha.21/pln_0.1.0-alpha.21_linux_arm64.tar.gz"
+      sha256 "d26c430ea611108c74dfc9718bf3d123cf0d9d807b8e11fc67a17f69be5a6dc5"
       define_method(:install) do
         bin.install "pln"
+        (etc/"newsyslog.d").install "pln.newsyslog.conf"
       end
     end
   end
