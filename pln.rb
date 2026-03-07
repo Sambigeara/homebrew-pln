@@ -10,7 +10,7 @@ class Pln < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/Sambigeara/pollen/releases/download/v0.1.0-alpha.59/pln_0.1.0-alpha.59_darwin_amd64.tar.gz"
-      sha256 "9d2df5cc4afeabc62a279e3fb06962c8dd8841c8e6e830e94506b139ddf6dc08"
+      sha256 "5f017a71fd1c4dcdaa468bfdba096c6ab9b8d6579167a97cc9b334b4883aeef8"
 
       define_method(:install) do
         bin.install "pln"
@@ -18,7 +18,7 @@ class Pln < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/Sambigeara/pollen/releases/download/v0.1.0-alpha.59/pln_0.1.0-alpha.59_darwin_arm64.tar.gz"
-      sha256 "eccf8a2194dd6a4759ff6d8957ece2295e65027b3c42ab5d7ca7cfb299f80552"
+      sha256 "bd3adaa890f9ec387002a3090f61b8508815ce272edcf211642483f9af8739bf"
 
       define_method(:install) do
         bin.install "pln"
@@ -29,14 +29,14 @@ class Pln < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/Sambigeara/pollen/releases/download/v0.1.0-alpha.59/pln_0.1.0-alpha.59_linux_amd64.tar.gz"
-      sha256 "9a5871353b038d855b99e0d73ba2e16936903012b163d5313da0781da6dd8000"
+      sha256 "3defa8510a25bc9f2de42ec4c12c42de0e73e2199fe25451c84f8f8722b42e06"
       define_method(:install) do
         bin.install "pln"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/Sambigeara/pollen/releases/download/v0.1.0-alpha.59/pln_0.1.0-alpha.59_linux_arm64.tar.gz"
-      sha256 "b13c54871bee97fc9d48950d80364583f63c6eddb72def94e4ea299cecd9244a"
+      sha256 "a1542d618487bf4347ce39f6746554403476a02defd8b029b4efaa23fd924d3d"
       define_method(:install) do
         bin.install "pln"
       end
