@@ -5,20 +5,20 @@
 class Pln < Formula
   desc "Mesh network daemon"
   homepage ""
-  version "0.1.0-alpha.127"
+  version "0.1.0-alpha.128"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Sambigeara/pollen/releases/download/v0.1.0-alpha.127/pln_0.1.0-alpha.127_darwin_amd64.tar.gz"
-      sha256 "9fe3a3ec36fc6720fe9e2643adb0bbcc49b7e2dca89c50f5a68acfde379519aa"
+      url "https://github.com/Sambigeara/pollen/releases/download/v0.1.0-alpha.128/pln_0.1.0-alpha.128_darwin_amd64.tar.gz"
+      sha256 "7993e4d4141fcc9a760553976b5c41dea71685659a8a00f4be976344b42d5f97"
 
       define_method(:install) do
         bin.install "pln"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Sambigeara/pollen/releases/download/v0.1.0-alpha.127/pln_0.1.0-alpha.127_darwin_arm64.tar.gz"
-      sha256 "902f076d670151b54f03b86557f5e786725c9183790a076c7a51bfe31a344fcc"
+      url "https://github.com/Sambigeara/pollen/releases/download/v0.1.0-alpha.128/pln_0.1.0-alpha.128_darwin_arm64.tar.gz"
+      sha256 "1ac064af4a7f3a171321cae1ccc6715d2777bb2668a741f639c32e291d66958e"
 
       define_method(:install) do
         bin.install "pln"
@@ -28,15 +28,15 @@ class Pln < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Sambigeara/pollen/releases/download/v0.1.0-alpha.127/pln_0.1.0-alpha.127_linux_amd64.tar.gz"
-      sha256 "11c9466e2eba025ecb81cc13ab4ba173204d931f0f140352fe6d79fc3e37ac01"
+      url "https://github.com/Sambigeara/pollen/releases/download/v0.1.0-alpha.128/pln_0.1.0-alpha.128_linux_amd64.tar.gz"
+      sha256 "d901c926d30e34e17a7b6c60a076b2b1c456221b6d80460c2c87ae5f26947431"
       define_method(:install) do
         bin.install "pln"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Sambigeara/pollen/releases/download/v0.1.0-alpha.127/pln_0.1.0-alpha.127_linux_arm64.tar.gz"
-      sha256 "5e9aa8bef49619955cfdc858a5044b8eced2079988ec5065e4ad886ad6957330"
+      url "https://github.com/Sambigeara/pollen/releases/download/v0.1.0-alpha.128/pln_0.1.0-alpha.128_linux_arm64.tar.gz"
+      sha256 "2df0e15765d13dec23b5a88268188648787b70a9c608278b55f4de31f10a3156"
       define_method(:install) do
         bin.install "pln"
       end
