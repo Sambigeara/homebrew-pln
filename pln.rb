@@ -5,20 +5,20 @@
 class Pln < Formula
   desc "Mesh network daemon"
   homepage ""
-  version "0.1.0-alpha.3"
+  version "0.0.1-dev.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Sambigeara/pollen/releases/download/v0.1.0-alpha.3/pln_0.1.0-alpha.3_darwin_amd64.tar.gz"
-      sha256 "8b6eab73f0988d3fc55b7ae8c6b3236f6f327a8fa4ce43a2b3c837aa61d9847b"
+      url "https://github.com/Sambigeara/pollen/releases/download/v0.0.1-dev.1/pln_0.0.1-dev.1_darwin_amd64.tar.gz"
+      sha256 "e0b73a1ef39142e3bc4acf631a2a1eeff0ebc45a352e9c71f2c8147cec361944"
 
       define_method(:install) do
         bin.install "pln"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Sambigeara/pollen/releases/download/v0.1.0-alpha.3/pln_0.1.0-alpha.3_darwin_arm64.tar.gz"
-      sha256 "ab492181f04785a600409ab8667d4d51b899613c506d4e2a3c2a63f3c5f6a8d5"
+      url "https://github.com/Sambigeara/pollen/releases/download/v0.0.1-dev.1/pln_0.0.1-dev.1_darwin_arm64.tar.gz"
+      sha256 "2ca13a02b2fe5128ea92733ee98641bc1767be40f9f5c68da6ff1782121047af"
 
       define_method(:install) do
         bin.install "pln"
@@ -28,15 +28,15 @@ class Pln < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Sambigeara/pollen/releases/download/v0.1.0-alpha.3/pln_0.1.0-alpha.3_linux_amd64.tar.gz"
-      sha256 "a7b09c67528df1a05de905a0d1e88f4eda786b96960382b62fb71ecd09c21c42"
+      url "https://github.com/Sambigeara/pollen/releases/download/v0.0.1-dev.1/pln_0.0.1-dev.1_linux_amd64.tar.gz"
+      sha256 "1e6a58fa4e9a134b719c6eb8aa72e7829218cf16f8b1cbe85b42a750aa92bfe4"
       define_method(:install) do
         bin.install "pln"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Sambigeara/pollen/releases/download/v0.1.0-alpha.3/pln_0.1.0-alpha.3_linux_arm64.tar.gz"
-      sha256 "d0d2bebd0cd98a33aa598299ca04170097fe64ebecda1674e9c090c1b1876400"
+      url "https://github.com/Sambigeara/pollen/releases/download/v0.0.1-dev.1/pln_0.0.1-dev.1_linux_arm64.tar.gz"
+      sha256 "b08ff73316a44d22f29b4063efaae37676252e74cd4865e2cfb90e31f6b10042"
       define_method(:install) do
         bin.install "pln"
       end
